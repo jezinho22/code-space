@@ -1,13 +1,17 @@
 import "./App.css";
-import Button from "./components/Button"
+import { useState } from "react";
+import Button from "./components/Button";
 
 export default function App() {
-  function clickHandler(event){
-    console.log('Hey that tickles!')
-  }
+	const [opendEditor, setOpendEditor] = useState("html");
+
+	function clickHandler(editorName) {
+		setOpendEditor(editorName);
+	}
+
 	return (
-  <div className="App">
-    <Button title='Click me' onClick = {clickHandler}/>
-  </div>;
-  )
+		<div className="App">
+			<Button title={"Click me"} onClick={clickHandler} />
+		</div>
+	);
 }
