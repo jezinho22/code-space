@@ -1,7 +1,13 @@
 import "./App.css";
+import Button from "./components/Button"
 
-function App() {
-	return <div className="App"></div>;
+export default function App() {
+  function clickHandler(event){
+    console.log('Hey that tickles!')
+  }
+	return (
+  <div className="App">
+    <Button title='Click me' onClick = {clickHandler}/>
+  </div>;
+  )
 }
-
-export default App;
